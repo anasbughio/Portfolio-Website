@@ -14,7 +14,6 @@ export default function Hero() {
             Available for Internships & Projects
           </div>
 
-          {/* Updated Title specifically tailored for a MERN Stack Developer */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
             Engineering full-stack MERN apps with <span className="text-[#7B88FF]">precision.</span>
           </h1>
@@ -26,7 +25,7 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <Link 
               to="#" 
-              className=" hover:bg-[#6876ff] active:bg-[#5260ff] text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-[#7B88FF]/10 flex items-center gap-2 border border-[#7B88FF]"
+              className="bg-[#7B88FF] hover:bg-[#6876ff] active:bg-[#5260ff] text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-[#7B88FF]/10 flex items-center gap-2 border border-[#7B88FF]"
             >
               <span>View Projects</span>
               <ArrowDown className="w-4 h-4 stroke-[2.5]" />
@@ -40,7 +39,23 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* Stats Section: Gemini API removed */}
+          {/* ⚠️ TEMPORARY DEV ROUTE TESTERS (Highlight and delete this block before final deploy) */}
+          <div className="pt-1 flex items-center gap-2.5">
+            <span className="text-xs font-mono text-amber-400/90 uppercase tracking-wider mr-1">Dev test:</span>
+            <Link 
+              to="/login" 
+              className="px-3 py-1 rounded-lg bg-[#111622] hover:bg-[#7B88FF] hover:text-[#0B0F17] border border-dashed border-slate-700 text-slate-400 text-xs font-mono transition-all"
+            >
+              /login
+            </Link>
+            <Link 
+              to="/signup" 
+              className="px-3 py-1 rounded-lg bg-[#111622] hover:bg-[#7B88FF] hover:text-[#0B0F17] border border-dashed border-slate-700 text-slate-400 text-xs font-mono transition-all"
+            >
+              /signup
+            </Link>
+          </div>
+
           <div className="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 max-w-md">
             <div>
               <div className="text-lg font-bold text-white">Next.js</div>
