@@ -7,6 +7,7 @@ import Login from './components/Login'
 import './App.css'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
+import Contact from './components/Contact'
 
 function HomeContent() {
   return (
@@ -15,6 +16,7 @@ function HomeContent() {
       <About />
       <Projects />
       <Skills />
+      <Contact />
     </main>
   )
 }
