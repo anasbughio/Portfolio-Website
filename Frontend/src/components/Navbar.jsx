@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const { user, logout } = useAuth();
 
   // Scroll Spy Hook: Tracks the viewport and updates activeSection automatically
   useEffect(() => {
@@ -49,10 +51,10 @@ export default function Navbar() {
          Anas
         </a>
 
-        {/* ================= DESKTOP NAVIGATION ================= */}
+       
         <nav className="hidden md:flex items-center gap-9 text-sm font-medium">
           
-          {/* HOME */}
+          
           <a 
             href="#home" 
             onClick={() => setActiveSection('home')}
@@ -66,7 +68,7 @@ export default function Navbar() {
             )}
           </a>
 
-          {/* PROJECTS */}
+         
           <a 
             href="#projects" 
             onClick={() => setActiveSection('projects')}
@@ -80,7 +82,7 @@ export default function Navbar() {
             )}
           </a>
 
-          {/* ABOUT */}
+      
           <a 
             href="#about" 
             onClick={() => setActiveSection('about')}
@@ -94,7 +96,7 @@ export default function Navbar() {
             )}
           </a>
 
-          {/* SKILLS */}
+   
           <a 
             href="#skills" 
             onClick={() => setActiveSection('skills')}
@@ -108,7 +110,7 @@ export default function Navbar() {
             )}
           </a>
 
-          {/* CONTACT */}
+        
           <a 
             href="#contact" 
             onClick={() => setActiveSection('contact')}
@@ -124,23 +126,37 @@ export default function Navbar() {
 
         </nav>
 
-        {/* Right Action Links */}
-        <div className="hidden md:flex items-center gap-7">
-          <Link
-            to={"/login"} 
-            className="text-sm font-bold text-slate-300 hover:text-[#7B88FF] transition-colors cursor-pointer"
-          >
-            Login
-          </Link>
-          <Link
-            to={"/signup"} 
-            className="text-sm font-bold text-slate-300 hover:text-[#7B88FF] transition-colors cursor-pointer"
-          >
-           Get Started
-          </Link>
-        </div>
+   
+    <div className="hidden md:flex items-center gap-7">
+  {user ? (
+    // IF LOGGED IN: Show their name and a Logout button!
+    <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 font-mono text-xs text-[#B4BCFF] bg-[#111622] px-3 py-1.5 rounded-full border border-slate-800">
+        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>{user.name}</span>
+      </div>
+      
+      <button 
+        onClick={logout}
+        className="text-xs font-bold text-slate-400 hover:text-red-400 transition-colors cursor-pointer"
+      >
+        Logout
+      </button>
+    </div>
+  ) : (
+    // IF NOT LOGGED IN: Show standard Login / Get Started
+    <>
+      <Link to="/login" className="text-sm font-bold text-slate-300 hover:text-[#7B88FF] transition-colors cursor-pointer">
+        Login
+      </Link>
+      <Link to="/signup" className="text-sm font-bold text-slate-300 hover:text-[#7B88FF] transition-colors cursor-pointer">
+        Signup
+      </Link>
+    </>
+  )}
+</div>
 
-        {/* Mobile Menu Toggle */}
+   
         <div className="md:hidden flex items-center">
           <button 
             type="button" 
@@ -160,7 +176,7 @@ export default function Navbar() {
 
       </div>
 
-      {/* ================= MOBILE DROPDOWN (Synced with state) ================= */}
+     
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#0B0F17] border-b border-slate-800 px-6 py-6 space-y-3 shadow-2xl animate-fadeIn">
           
