@@ -39,23 +39,6 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* ⚠️ TEMPORARY DEV ROUTE TESTERS (Highlight and delete this block before final deploy) */}
-          <div className="pt-1 flex items-center gap-2.5">
-            <span className="text-xs font-mono text-amber-400/90 uppercase tracking-wider mr-1">Dev test:</span>
-            <Link 
-              to="/login" 
-              className="px-3 py-1 rounded-lg bg-[#111622] hover:bg-[#7B88FF] hover:text-[#0B0F17] border border-dashed border-slate-700 text-slate-400 text-xs font-mono transition-all"
-            >
-              /login
-            </Link>
-            <Link 
-              to="/signup" 
-              className="px-3 py-1 rounded-lg bg-[#111622] hover:bg-[#7B88FF] hover:text-[#0B0F17] border border-dashed border-slate-700 text-slate-400 text-xs font-mono transition-all"
-            >
-              /signup
-            </Link>
-          </div>
-
           <div className="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 max-w-md">
             <div>
               <div className="text-lg font-bold text-white">Next.js</div>
