@@ -5,12 +5,14 @@ import About from './components/About'
 import SignUp from './components/Signup'
 import Login from './components/Login'
 import './App.css'
+import Projects from './components/Projects'
 
 function HomeContent() {
   return (
     <main>
       <Hero />
       <About />
+      <Projects />
     </main>
   )
 }
