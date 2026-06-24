@@ -5,7 +5,6 @@ export default function Projects() {
     <section id="projects" className="bg-[#0B0F17] text-slate-100 py-20 px-6 md:px-12 font-sans select-none border-t border-slate-900/60">
       <div className="max-w-6xl mx-auto">
         
-        {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -29,10 +28,8 @@ export default function Projects() {
           </a>
         </div>
 
-        {/* 3-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
-          {/* ================= PROJECT CARD 1: MED VISION AI ================= */}
           <a 
             href="https://github.com/minhasfahad/medvision-ai"
             target="_blank"
@@ -55,7 +52,6 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* Body */}
             <div className="p-6 flex-1 flex flex-col justify-between space-y-5 text-left">
               <div className="flex flex-wrap gap-1.5">
                 <span className="px-2.5 py-1 rounded-md bg-[#0B0F17]/90 border border-slate-800/90 text-[10px] font-mono tracking-wide text-[#B4BCFF]">React</span>
@@ -75,8 +71,6 @@ export default function Projects() {
             </div>
           </a>
 
-
-          {/* ================= PROJECT CARD 2: SERENITY AI ================= */}
           <a 
             href="https://github.com/anasbughio/mental-health-platform"
             target="_blank"
@@ -99,7 +93,6 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* Body */}
             <div className="p-6 flex-1 flex flex-col justify-between space-y-5 text-left">
               <div className="flex flex-wrap gap-1.5">
                 <span className="px-2.5 py-1 rounded-md bg-[#0B0F17]/90 border border-slate-800/90 text-[10px] font-mono tracking-wide text-[#B4BCFF]">React</span>
@@ -119,8 +112,6 @@ export default function Projects() {
             </div>
           </a>
 
-
-          {/* ================= PROJECT CARD 3: BOOKS EXCHANGE ================= */}
           <a 
             href="https://github.com/anasbughio/Book-Exchange-Platform"
             target="_blank"

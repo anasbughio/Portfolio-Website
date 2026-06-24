@@ -6,6 +6,7 @@ import SignUp from './components/Signup'
 import Login from './components/Login'
 import './App.css'
 import Projects from './components/Projects'
+import Skills from './components/Skills'
 
 function HomeContent() {
   return (
@@ -13,6 +14,7 @@ function HomeContent() {
       <Hero />
       <About />
       <Projects />
+      <Skills />
     </main>
   )
 }
