@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// 1. Create a base instance 
+// --- UPDATED: Smart dynamic URL switching for Local vs Vercel ---
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: import.meta.env.DEV ? 'http://localhost:5000/api' : '/api',
   withCredentials: true,
 });
 

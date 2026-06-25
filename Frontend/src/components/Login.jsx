@@ -14,7 +14,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Fire the central context action
+    
     const result = await login(email, password);
     
     if (result.success) {

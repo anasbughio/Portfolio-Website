@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: ['http://localhost:5173'], // On live Vercel, Same-Origin requests bypass CORS automatically!
+  origin: true,
   credentials: true
 }));
 
