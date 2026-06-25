@@ -58,14 +58,13 @@ export const loginUser = async (req, res) => {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
 
-    // 2. Verify password matches the hash in DB
     const isMatch = await user.matchPassword(password);
 
     if (!isMatch) {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
 
-    // 3. Success! Send user data back (without the password)
+    
     res.status(200).json({
       _id: user._id,
       name: user.name,
