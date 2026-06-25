@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// --- UPDATED: Smart dynamic URL switching for Local vs Vercel ---
+// FORCE VITE REBUILD: CACHE SHOCK 001 <--- Yeh farzi line add karo!
 const API = axios.create({
   baseURL: import.meta.env.DEV ? 'http://localhost:5000/api' : '/api',
   withCredentials: true,
