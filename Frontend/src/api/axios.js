@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// FORCE VITE REBUILD: CACHE SHOCK 001 <--- Yeh farzi line add karo!
+// THE REAL AXIOS INSTANCE (Connected to AuthContext)
 const API = axios.create({
   baseURL: import.meta.env.DEV ? 'http://localhost:5000/api' : '/api',
   withCredentials: true,
@@ -9,7 +9,6 @@ const API = axios.create({
 API.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
-    
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
