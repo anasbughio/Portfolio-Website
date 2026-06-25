@@ -1,8 +1,16 @@
 import axios from 'axios';
 
-// THE REAL AXIOS INSTANCE (Connected to AuthContext)
+// =================================================================
+// RUNTIME BROWSER CHECK (Bypasses Vite compiler bugs 100%)
+// =================================================================
+const isLocalhost = Boolean(
+  window.location.hostname === 'localhost' || 
+  window.location.hostname === '127.0.0.1'
+);
+
 const API = axios.create({
-  baseURL: import.meta.env.DEV ? 'http://localhost:5000/api' : '/api',
+  // Agar browser ka address bar 'localhost' hai toh 5000 par jao, warna cloud '/api' use karo:
+  baseURL: isLocalhost ? 'http://localhost:5000/api' : '/api',
   withCredentials: true,
 });
 
