@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-[#0B0F17] text-slate-100 py-28 px-6 md:px-12 font-sans select-none border-t border-slate-900/60">
+    <section id="skills" className="bg-[#0B0F17] text-slate-100 py-12 px-6 md:px-12 font-sans select-none border-t border-slate-900/60">
       <div className="max-w-6xl mx-auto">
         
-        {/* Section Header matching image_7cb424.png */}
-        <div className="text-center max-w-2xl mx-auto mb-20 space-y-3">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#B4BCFF] tracking-tight">
+        
+        <div className="max-w-2xl  mb-20 space-y-3">
+          <h2 className="text-3xl sm:text-4xl font-extrabold  tracking-tight">
            Skills
           </h2>
           <p className="text-slate-400 text-sm sm:text-base font-normal">
