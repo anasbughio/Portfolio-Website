@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-[#0B0F17] text-slate-100 py-20 px-6 md:px-12 font-sans select-none border-t border-slate-900/60">
+    <section id="projects" className="bg-[#0B0F17] text-slate-100 py-15 px-6 md:px-12 font-sans select-none border-t border-slate-900/60">
       <div className="max-w-6xl mx-auto">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">

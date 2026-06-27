@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import authRoutes from './routes/authRoutes.js';
+import contactRoutes from './routes/contactRoutes.js';
 
 dotenv.config();
 
@@ -16,19 +17,18 @@ app.use(cors({
 }));
 
 app.use('/api/auth', authRoutes);
+app.use('/api/contact', contactRoutes);
 
 app.get(['/', '/api'], (req, res) => {
   res.status(200).json({ status: "online", message: "Anas Portfolio API" });
 });
 
-// =================================================================
-// RULE 2: SERVERLESS MONGOOSE CACHE (Prevents Atlas Lockouts)
-// =================================================================
+
 let isConnected = false;
 
 const connectDB = async () => {
   if (isConnected) {
-    return; // DB is already warm, skip re-dialing
+    return; 
   }
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI);

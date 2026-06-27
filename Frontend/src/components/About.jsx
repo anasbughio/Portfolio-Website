@@ -2,7 +2,7 @@ import React from 'react';
 import img  from '../assets/anas.jpg' 
 export default function About() {
   return (
-    <section id="about" className="bg-[#0B0F17] text-slate-100 py-20 px-6 md:px-12 font-sans select-none">
+    <section id="about" className="bg-[#0B0F17] text-slate-100 py-12 px-6 md:px-12 font-sans select-none">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <div className="lg:col-span-5">
@@ -18,7 +18,7 @@ export default function About() {
 
         <div className="lg:col-span-7 space-y-6 text-left">
           
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#7B88FF] tracking-wide">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-wide">
             About the Developer
           </h2>
 
