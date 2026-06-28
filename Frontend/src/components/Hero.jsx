@@ -23,20 +23,20 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
-            <Link 
-              to="#" 
+            <a
+              href="#projects"
               className="bg-[#7B88FF] hover:bg-[#6876ff] active:bg-[#5260ff] text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-[#7B88FF]/10 flex items-center gap-2 border border-[#7B88FF]"
             >
               <span>View Projects</span>
               <ArrowDown className="w-4 h-4 stroke-[2.5]" />
-            </Link>
+            </a>
 
-            <Link 
-              to="#" 
+            <a
+              href="#about"
               className="bg-[#111622] hover:bg-[#161d2e] text-slate-300 font-semibold px-6 py-3.5 rounded-xl text-sm border border-slate-800 transition-all hover:text-white"
             >
               About Me
-            </Link>
+            </a>
           </div>
 
           <div className="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 max-w-md">
